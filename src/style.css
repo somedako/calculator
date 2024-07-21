@@ -1,0 +1,125 @@
+:root {
+  --black: #161616;
+  --white: #fff;
+  --gray-text: #a6a6a6;
+  --orange: #ff7c1e;
+  --orange-hover: #d75e06;
+  --shadow: 2px 2px 16px 0 rgba(0, 0, 0, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Montseratt", sans-serif;
+  color: var(--black);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: "Montseratt", sans-serif;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 20px auto;
+}
+
+.calculator-header {
+  color: var(--orange);
+  text-align: center;
+}
+
+.calculator-content {
+  margin-top: 20px;
+}
+
+.calculator-tariff {
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.calculator-tariff-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 440px;
+  width: 100%;
+}
+
+.calculator-tariff-label {
+  font-weight: 600;
+  color: var(--gray-text);
+}
+
+.calculator-tariff-select {
+  padding: 15px;
+  border: 1px solid var(--black);
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.tariff-btn {
+  min-height: 51px;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  background: var(--orange);
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s linear;
+}
+
+.tariff-btn:hover {
+  background: var(--orange-hover);
+}
+
+.calculator-tariff-prices {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 570px) {
+  .calculator-tariff {
+    box-shadow: none;
+  }
+
+  .calculator-tariff-sections {
+    min-width: 300px;
+  }
+}
